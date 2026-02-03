@@ -9,8 +9,8 @@ Designed for **performance, clarity, and scalability**, VGX-JobCreator removes t
 
 ## ✨ Key Features
 - 🧩 **In-Game Job Creation & Editing**
-- 🎨 **Modern UI (Bento-style dashboard)**
-- 🌍 **Arabic & English support (Auto embeds)**
+- 🎨 **Modern UI **
+- 🌍 **Arabic & English support**
 - 🧠 **Real-time job sync (no restart required)**
 - 🔐 **Permission-based admin actions**
 - 📊 **Detailed Discord Logs**
