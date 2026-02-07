@@ -44,10 +44,8 @@ if QBCore.Shared.Jobs[PlayerData.job.name] then
         PlayerData.job.grade.name = jobInfo.grades[gradeLevel].label
     end
 end
-[4] - After saving the file, restart your server or the core resource
-
 ```
-
+[4] - After saving the file, restart your server or the core resource
 ---
 
 ## 🛠️ Supported Actions
