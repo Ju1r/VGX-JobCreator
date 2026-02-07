@@ -1,9 +1,10 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
-author 'Just.A'
+author 'VGX DEV'
 description 'VGX-JobCreator'
-version '1.0.0'
+version '1.0.2'
 
 ui_page 'html/index.html'
 
@@ -27,4 +28,4 @@ files {
   'html/sounds/*.mp3'
 }
 
-lua54 'yes'
+
