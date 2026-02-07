@@ -21,6 +21,35 @@ Designed for **performance, clarity, and scalability**, VGX-JobCreator removes t
 
 ---
 
+
+## VERY IMPORTANT
+[1] - Go to your core framework resource: (qb-core)
+```lua
+qb-core/server/player.lua
+```
+[2] - Search for the job setup block inside the file, such as:
+```lua
+PlayerData.job and PlayerData.job.name ~= nil and PlayerData.job.grade and PlayerData.job.grade.level ~= nil
+```
+[3] - Add the following code directly below the job grade initialization:
+```lua
+if QBCore.Shared.Jobs[PlayerData.job.name] then
+    local jobInfo = QBCore.Shared.Jobs[PlayerData.job.name]
+    local gradeLevel = tostring(PlayerData.job.grade.level)
+    if not jobInfo.grades[gradeLevel] then
+        gradeLevel = "0"
+        PlayerData.job.grade = {level = 0,name = jobInfo.grades["0"].label or "Recruit"}
+        PlayerData.job.payment = jobInfo.grades["0"].payment or PlayerData.job.payment
+    else
+        PlayerData.job.grade.name = jobInfo.grades[gradeLevel].label
+    end
+end
+[4] - After saving the file, restart your server or the core resource
+
+```
+
+---
+
 ## 🛠️ Supported Actions
 - Create Jobs
 - Edit Jobs (with old/new data tracking)
