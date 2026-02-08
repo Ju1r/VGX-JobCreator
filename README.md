@@ -41,7 +41,7 @@ if QBCore.Shared.Jobs[PlayerData.job.name] then
         PlayerData.job.grade = {level = 0,name = jobInfo.grades["0"].label or "Recruit"}
         PlayerData.job.payment = jobInfo.grades["0"].payment or PlayerData.job.payment
     else
-        PlayerData.job.grade.name = jobInfo.grades[gradeLevel].label
+        PlayerData.job.grade.name = PlayerData.job.grade.name
     end
 end
 ```
